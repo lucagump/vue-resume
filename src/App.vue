@@ -2,7 +2,7 @@
   <div class="main-wrapper">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#about">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-block d-lg-none">Luca Martinelli</span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/profile.jpg" alt="">
         </span>
@@ -199,36 +199,12 @@
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
+        <div class="my-auto" v-for="award in awards" :key="award.description">
           <h2 class="mb-5">Awards &amp; Certifications</h2>
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Analytics Certified Developer</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Mobile Web Specialist - Google Certification</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              2<sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              3<sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005</li>
+              {{award.descriprion}}</li>
           </ul>
         </div>
       </section>
@@ -241,26 +217,26 @@
 export default {
   data () {
     return {
-      title: 'My portfolio',
-      name: 'CLARENCE',
-      surname: 'TAYLOR',
-      address: '3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·',
-      email: 'name@email.com',
+      title: 'Luca Martinelli',
+      name: 'Luca',
+      surname: 'Martinelli',
+      address: 'Strada Boiane 3 · Suzzara (MN), IT 46029 · (+39) 333-4895818 ·',
+      email: 'l.martinelli@hotmail.com',
       aboutMe: 'I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.',
       experience: [
         {
-          position: 'Senior Web Developer',
-          company: 'Intelitec Solutions',
-          description: 'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.',
-          startDate: 'March 2013',
+          position: 'Software Engineer',
+          company: 'Zucchetti',
+          description: 'I\'m working in Horeca group, TCPOS is Zucchetti’s omni-functional hub for seamless guest service in restaurants, canteens, quick-service and hotels.',
+          startDate: 'February 2020',
           endDate: 'Present'
         },
         {
-          position: 'Web Developer',
-          company: 'Intelitec Solutions',
-          description: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.',
-          startDate: 'December 2011',
-          endDate: 'March 2013'
+          position: 'Project Manager and Software Developer',
+          company: 'E-Agle Trento Racing Team',
+          description: 'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.',
+          startDate: 'September 2017',
+          endDate: 'Present'
         },
         {
           position: 'Junior Web Designer',
@@ -268,15 +244,44 @@ export default {
           description: 'Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.',
           startDate: 'July 2010',
           endDate: 'December 2011'
+        }
+      ],
+      education: [
+        {
+          course: 'ICT Innovation Software and Service Architectures',
+          university: 'Università degli Studi di Trento',
+          description: 'Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.',
+          startDate: 'September 2019',
+          endDate: 'Present'
         },
         {
-          position: 'Web Design Intern',
-          company: 'Shout! Media Productions',
+          course: 'Bachelor Degree in Computer Science',
+          university: 'Università degli Studi di Trento',
           description: 'Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.',
-          startDate: 'September 2008',
-          endDate: 'June 2010'
+          startDate: 'September 2015',
+          endDate: 'July 2019'
         }
-      ]
+      ],
+      interests: [
+        {
+          first_descriprion: 'Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking',
+          second_description: 'When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.'
+        }
+      ],
+      awards: [
+        {
+          descriprion: 'Best HMI Solution - Automobili Lamborghini S.p.A.'
+        }
+      ],
+      skills: [
+        'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"',
+        'Qt, C++, QML: Cross-Platform Development',
+        'Can-Bus: Linux Embedded Systems',
+        'Linux: Embedded Systems and Server',
+        'Node.JS & Vue.JS: Services and Web Application',
+        'C# and .NET: First Steps'
+      ],
+      field: 'Automotive, Formula Student, Linux, Snowboard, Athletics and Mountain Bike'
     }
   },
   mounted () {

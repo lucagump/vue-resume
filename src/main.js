@@ -1,10 +1,6 @@
 
 import Vue from 'vue'
 import App from './App'
-import jquery from 'jquery'
-require('jquery.easing')
-
-Vue.prototype.jquery = jquery
 
 Vue.config.productionTip = false
 

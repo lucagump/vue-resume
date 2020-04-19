@@ -48,23 +48,21 @@
             <li class="list-inline-item">
               <a href="https://www.facebook.com/luca.martinelli.12139">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                <i class="devicon-facebook-plain"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://www.instagram.com/lucagump">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  <i class="fab fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/luca-martinelli-7ab713168">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                 </span>
               </a>
@@ -72,8 +70,7 @@
             <li class="list-inline-item">
               <a href="https:\\www.github.com/lucagump">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                <i class="devicon-github-plain-wordmark"></i>
                 </span>
               </a>
             </li>
@@ -129,25 +126,43 @@
           <div class="subheading mb-4">Programming Languages &amp; Tools</div>
           <ul class="list-inline list-icons">
             <li class="list-inline-item">
-              <i class="devicons devicons-html5"></i>
+              <i class="devicon-html5-plain"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-github"></i>
+              <i class="devicon-mongodb-plain"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-javascript"></i>
+              <i class="devicon-linux-plain"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-mongodb"></i>
+              <i class="devicon-nodejs-plain"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-npm"></i>
+            <i class="devicon-visualstudio-plain"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-nodejs"></i>
+            <i class="devicon-csharp-plain"></i>
             </li>
-            <li>
-            <i class="fa fa-google-drive"></i>
+            <li class="list-inline-item">
+            <i class="devicon-vim-plain"></i>
+            </li>
+            <li class="list-inline-item">
+            <i class="devicon-ubuntu-plain"></i>
+            </li>
+            <li class="list-inline-item">
+            <i class="devicon-windows8-original"></i>
+            </li>
+            <li class="list-inline-item">
+             <i class="devicon-vuejs-plain"></i>
+            </li>
+            <li class="list-inline-item">
+            <i class="devicon-photoshop-line"></i>
+            </li>
+            <li class="list-inline-item">
+            <i class="devicon-express-original"></i>
+            </li>
+            <li class="list-inline-item">
+            <i class="devicon-github-plain-wordmark"></i>
             </li>
           </ul>
         </div>
@@ -155,8 +170,7 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>{{interests.first_description}}</p>
-          <p class="mb-0">{{interests.second_description}}</p>
+          <p>{{interests}}</p>
         </div>
       </section>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
@@ -223,12 +237,7 @@ export default {
           endDate: 'July 2019'
         }
       ],
-      interests: [
-        {
-          first_description: 'Apart from being a student and a developer, I enjoy most of my time being a strict contact with nature. In the winter, I am an Snowboarder. I enjoy mountain biking',
-          second_description: 'When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring problem-solver, and I spend a large amount of my time exploring the latest technolgy in the software development and design interaction.'
-        }
-      ],
+      interests: 'Apart from being a student and a developer, I enjoy most of my time being a strict contact with nature. In the winter, I am an Snowboarder. I enjoy mountain biking and when I\'m forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring problem-solver, and I spend a large amount of my time exploring the latest technolgy in the software development and design interaction.',
       awards: {
         description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
         certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'

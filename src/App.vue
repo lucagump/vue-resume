@@ -6,7 +6,7 @@
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/profile.jpg">
         </span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -36,14 +36,14 @@
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="about-bg"></div>
         <div class="my-auto">
-          <h1 class="mb-0">{{ name }}
-            <span class="text-primary">{{ surname }}</span>
+          <h1 class="mb-0">{{ text.name }}
+            <span class="text-primary">{{ text.surname }}</span>
           </h1>
-          <div class="subheading mb-5">{{ address }}
-            <a href="mailto:name@email.com">{{ email }}</a>
+          <div class="subheading mb-5">{{ text.address }}
+            <a href="mailto:name@email.com">{{ text.email }}</a>
           </div>
-          <p class="mb-0">{{ aboutMe1 }}</p>
-          <p class="mb-5">{{ aboutMe2 }}</p>
+          <p class="mb-2">{{ text.aboutMe1 }}</p>
+          <p class="mb-5">{{ text.aboutMe2 }}</p>
           <ul class="list-inline list-social-icons mb-0">
             <li class="list-inline-item">
               <a href="https://www.facebook.com/luca.martinelli.12139">
@@ -55,22 +55,21 @@
             <li class="list-inline-item">
               <a href="https://www.instagram.com/lucagump">
                 <span class="fa-stack fa-lg">
-                  <i class="fab fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-instagram"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/luca-martinelli-7ab713168">
                 <span class="fa-stack fa-lg">
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-linkedin"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https:\\www.github.com/lucagump">
                 <span class="fa-stack fa-lg">
-                <i class="devicon-github-plain-wordmark"></i>
+                  <i class="fa fa-github-square"></i>
                 </span>
               </a>
             </li>
@@ -80,7 +79,7 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
           <h2 class="mb-5">Experience</h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in experience" :key="job.description">
+          <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in text.experience" :key="job.description">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">{{ job.position }}</h3>
               <div class="subheading mb-3">{{ job.company }}</div>
@@ -95,11 +94,11 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
           <h2 class="mb-5">Education</h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="study in education" :key="study.description">
+          <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="study in text.education" :key="study.description">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">{{study.course}}</h3>
-              <div class="subheading mb-3">{{study.university}}</div>
-              <div>{{study.description}}</div>
+              <h3 class="mb-0">{{ study.course }}</h3>
+              <div class="subheading mb-3">{{ study.university }}</div>
+              <div>{{ study.description }}</div>
             </div>
             <div class="resume-date text-md-right">
               <span class="text-primary">{{ study.startDate }} - {{ study.endDate }}</span>
@@ -112,13 +111,13 @@
           <h2 class="mb-5">Skills</h2>
 
           <div class="subheading mb-3"> As a Developer</div>
-          <ul class="fa-ul mb-3" v-for="skill in skills" :key="skill.sk">
+          <ul class="fa-ul mb-3" v-for="skill in text.skills" :key="skill.sk">
             <li>
-              <i class="fa-li fa fa-check"></i>
+              <i class="fa-li fa fa-terminal"></i>
               {{skill.sk}}</li>
           </ul>
           <div class="subheading mb-3"> As a Human</div>
-          <ul class="fa-ul mb-3" v-for="softskill in softskills" :key="softskill.ss">
+          <ul class="fa-ul mb-3" v-for="softskill in text.softskills" :key="softskill.ss">
             <li>
               <i class="fa-li fa fa-check"></i>
               {{softskill.ss}}</li>
@@ -170,7 +169,7 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>{{interests}}</p>
+          <p>{{text.interests}}</p>
         </div>
       </section>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
@@ -179,7 +178,7 @@
           <ul class="fa-ul mb-0">
             <li>
             <i class="fa-li fa fa-check"></i>
-              {{awards.certificate}}</li>
+              {{text.awards.certificate}}</li>
           </ul>
         </div>
       </section>
@@ -188,75 +187,12 @@
 </template>
 
 <script>
+import dataText from './text.js'
+
 export default {
   data () {
     return {
-      title: 'Luca Martinelli',
-      name: 'Luca',
-      surname: 'Martinelli',
-      address: 'Strada Boiane 3 · Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
-      email: 'l.martinelli@hotmail.com',
-      aboutMe1: 'ICT Innovation Student @UNITN and Software Engineer @Zucchetti',
-      aboutMe2: 'I\'m an ICT Innovation Student interested in Automotive HMI and problem solving.',
-      experience: [
-        {
-          position: 'Software Engineer',
-          company: 'Zucchetti',
-          description: 'I\'m working in Horeca group, TCPOS is Zucchetti’s omni-functional hub for seamless guest service in restaurants, canteens, quick-service and hotels.',
-          startDate: 'February 2020',
-          endDate: 'Present'
-        },
-        {
-          position: 'Project Manager and Software Developer',
-          company: 'E-Agle Trento Racing Team',
-          description: 'Design and development of the user-interface for Chimera Evoluzione\'s Steering Wheel (Qt). During one of the competition in Varano (PR) 2018 - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of the Telemetry Solution using MQTT protocol for a Cloud Based Web Application using Raspberry PI, MongoDB and Vue. Project-Management related to the development of HW and SW solution for "Telemetria" and"Fenice Steering Wheel"',
-          startDate: 'September 2017',
-          endDate: 'Present'
-        },
-        {
-          position: 'Full Stack Developer',
-          company: 'Prom Facility',
-          description: 'Design and development of micro-services web application used to collect and display data from machinery and other internal purposes.',
-          startDate: 'Novembre 2018',
-          endDate: 'April 2019'
-        }
-      ],
-      education: [
-        {
-          course: 'Master Degree in ICT Innovation Software and Service Architectures',
-          university: 'Università degli Studi di Trento',
-          description: '',
-          startDate: 'September 2019',
-          endDate: 'Present'
-        },
-        {
-          course: 'Bachelor Degree in Computer Science',
-          university: 'Università degli Studi di Trento',
-          description: '',
-          startDate: 'September 2015',
-          endDate: 'July 2019'
-        }
-      ],
-      interests: 'Apart from being a student and a developer, I enjoy most of my time being a strict contact with nature. In the winter, I am an Snowboarder. I enjoy mountain biking and when I\'m forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring problem-solver, and I spend a large amount of my time exploring the latest technolgy in the software development and design interaction.',
-      awards: {
-        description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
-        certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'
-      },
-      skills: [
-        {sk: 'Qt, C++, QML: Cross-Platform Development'},
-        {sk: 'Can-Bus: Linux Embedded Systems'},
-        {sk: 'Linux: Embedded Systems and Server'},
-        {sk: 'Node.JS & Vue.JS: Services and Web Application'},
-        {sk: 'C# and .NET: First Steps'}
-      ],
-      softskills: [
-        {ss: 'Design Thinking'},
-        {ss: 'Critical Thinking'},
-        {ss: 'Emotional Intelligence'},
-        {ss: 'Co-Design'},
-        {ss: 'Empathy'}
-      ],
-      field: 'Automotive, Formula Student, Linux, Snowboard, Athletics and Mountain Bike'
+      text: dataText
     }
   }
 }
@@ -348,7 +284,7 @@ h2 {
   #sideNav .navbar-brand .img-profile {
     max-width: 13rem;
     max-height: 13rem;
-    border: 0.1rem solid rgba(255, 255, 255, 0.7);
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
   }
   #sideNav .navbar-collapse {
     display: flex;

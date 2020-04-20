@@ -196,8 +196,8 @@ export default {
       surname: 'Martinelli',
       address: 'Strada Boiane 3 · Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
       email: 'l.martinelli@hotmail.com',
-      aboutMe1: 'I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews.',
-      aboutMe2: 'Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.',
+      aboutMe1: 'ICT Innovation Student @UNITN and Software Engineer @Zucchetti',
+      aboutMe2: 'I\'m an ICT Innovation Student interested in Automotive HMI and problem solving.',
       experience: [
         {
           position: 'Software Engineer',

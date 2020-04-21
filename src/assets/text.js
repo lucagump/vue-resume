@@ -46,7 +46,7 @@ const text = {
             endDate: 'July 2019'
         }
     ],
-    interests: 'Apart from being a student and a developer, I enjoy most of my time being a strict contact with nature. In the winter, I am an Snowboarder. I enjoy mountain biking and when I\'m forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring problem-solver, and I spend a large amount of my time exploring the latest technolgy in the software development and design interaction.',
+    interests: 'Apart from being a student and a developer, I spend my free time being a strict contact with nature. In the winter, I am an Snowboarder and in summer I enjoy mountain biking. When I\'m forced indoors, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technolgy in the software development and design interaction.',
     awards: {
         description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
         certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'

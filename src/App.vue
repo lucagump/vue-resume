@@ -1,15 +1,12 @@
 <template>
   <div class="main-wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#about">
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/profile.jpg">
         </span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
@@ -175,7 +172,12 @@
       </section>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
+          <h2 class="mb-3">Interests</h2>
+          <div class="int-images">
+            <img src="./assets/insta-2.jpg" class="rounded mx-auto mb-2" width="41%" alt="Responsive image">
+            <img src="./assets/insta-3.jpg" class="rounded mx-auto mb-2" width="30.8%" alt="Responsive image">
+            <img src="./assets/insta-1.jpg" class="rounded mx-auto mb-2" width="24.7%" alt="Responsive image">
+          </div>
           <p>{{text.interests}}</p>
         </div>
       </section>
@@ -194,7 +196,7 @@
 </template>
 
 <script>
-import dataText from './text.js'
+import dataText from './assets/text.js'
 
 export default {
   data () {
@@ -238,6 +240,11 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+}
+
+.int-images{
+  display: inline;
+  vertical-align: center;
 }
 
 .subheading {
@@ -286,7 +293,7 @@ h2 {
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
-    padding: 0.5rem;
+    padding: 0.rem;
   }
   #sideNav .navbar-brand .img-profile {
     max-width: 13rem;

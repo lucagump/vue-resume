@@ -60,6 +60,13 @@
               </a>
             </li>
             <li class="list-inline-item">
+              <a href="https://open.spotify.com/user/lucagump?si=nX0vPKcKRTm0I7YKpfxOMw">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-spotify"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/luca-martinelli-7ab713168">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-linkedin"></i>

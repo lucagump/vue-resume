@@ -208,7 +208,7 @@ export default {
       text: dataText,
       typeValue: '',
       typeStatus: false,
-      typeArray: ['is a Master Student', 'is a problem solver', 'is a software developer', 'is a mountain-biker', 'is a tech enthusiast', 'is the one you are looking for'],
+      typeArray: dataText.isA,
       typingSpeed: 50,
       erasingSpeed: 30,
       newTextDelay: 500,

@@ -3,6 +3,7 @@ const text = {
     title: 'Luca Martinelli',
     name: 'Luca',
     surname: 'Martinelli',
+    isA: ['is a Master Student', 'is a problem solver', 'is a software developer', 'is a mountain-biker', 'is a tech enthusiast', 'is the one you are looking for'],
     address: 'Strada Boiane 3 · Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
     email: 'l.martinelli@hotmail.com',
     aboutMe1: 'ICT Innovation Student @UNITN and Software Engineer @Zucchetti',

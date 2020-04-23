@@ -24,7 +24,7 @@
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+            <a class="nav-link js-scroll-trigger" href="#awards">Certification</a>
           </li>
         </ul>
       </div>
@@ -35,6 +35,8 @@
         <div class="my-auto">
           <h1 class="mb-0">{{ text.name }}
             <span class="text-primary">{{ text.surname }}</span>
+            <span class="typed-text">{{ typeValue }}</span>
+            <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
           </h1>
           <div class="subheading mb-5">{{ text.address }}
             <a href="mailto:name@email.com">{{ text.email }}</a>
@@ -181,9 +183,9 @@
           <p>{{text.interests}}</p>
         </div>
       </section>
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" v-on:click="typer()" id="awards">
         <div class="my-auto">
-          <h2 class="mb-5">Certifications</h2>
+          <h2 class="mb-5" id="certi">Certifications</h2>
           <ul class="fa-ul mb-0">
             <li>
             <i class="fa-li fa fa-check"></i>
@@ -197,12 +199,61 @@
 
 <script>
 import dataText from './assets/text.js'
+import { setTimeout } from 'timers'
 
 export default {
-  data () {
+  name: 'landing',
+  data: function () {
     return {
-      text: dataText
+      text: dataText,
+      typeValue: '',
+      typeStatus: false,
+      typeArray: ['is a Master Student', 'is a problem solver', 'is a software developer', 'is a mountain-biker', 'is a tech enthusiast', 'is the one you are looking for'],
+      typingSpeed: 50,
+      erasingSpeed: 30,
+      newTextDelay: 500,
+      typeArrayIndex: 0,
+      charIndex: 0
     }
+  },
+  methods: {
+    typeText () {
+      if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
+        if (!this.typeStatus) {
+          this.typeStatus = true
+        }
+        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(this.charIndex)
+        this.charIndex += 1
+        setTimeout(this.typeText, this.typingSpeed)
+      } else {
+        this.typeStatus = false
+        setTimeout(this.eraseText, this.newTextDelay)
+      }
+    },
+    eraseText () {
+      if (this.charIndex > 0) {
+        if (!this.typeStatus) {
+          this.typeStatus = true
+        }
+        this.typeValue = this.typeArray[this.typeArrayIndex].substring(0, this.charIndex - 1)
+        this.charIndex -= 1
+        setTimeout(this.eraseText, this.erasingSpeed)
+      } else {
+        this.typeStatus = false
+        this.typeArrayIndex += 1
+        if (this.typeArrayIndex >= this.typeArray.length) {
+          this.typeArrayIndex = 0
+        }
+        setTimeout(this.typeText, this.typingSpeed + 1000)
+      }
+    }
+  },
+  created: function () {
+    setTimeout(this.typeText, this.newTextDelay + 200)
+  },
+  mounted: function () {
+    console.log('Come sei arrivato fino a qui?')
+    console.log(document.getElementById('certi').innerHTML)
   }
 }
 </script>
@@ -236,6 +287,20 @@ h6 {
 h1 {
   font-size: 6rem;
   line-height: 5.5rem;
+}
+
+typed-text {
+  color: #D2B94B;
+}
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 4px;
+  background-color: #BD5D38;
+  animation: cursorBlink 1s infinite;
+}
+.typing {
+  animation: none;
 }
 
 h2 {
@@ -277,6 +342,12 @@ h2 {
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@keyframes cursorBlink {
+  49% { background-color: #ffffff; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
 }
 
 @media (min-width: 992px) {

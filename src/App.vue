@@ -302,9 +302,10 @@ typed-text {
   animation: cursorBlink 1s infinite;
 }
 
-.typing {
+/* .typing {
   animation: none;
 }
+ */
 
 h2 {
   font-size: 3.5rem;

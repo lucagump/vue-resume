@@ -33,14 +33,12 @@
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="about-bg"></div>
         <div class="my-auto">
-          <h1 class="mb-0">{{ text.name }}
-            <span class="text-primary">{{ text.surname }}</span>
-            <span class="typed-text">{{ typeValue }}</span>
-            <!--  <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>-->
-          </h1>
-          <vue-typed-js :strings="['First text', 'Second Text']">
-            <h1 class="typing"></h1>
-          </vue-typed-js>
+            <vue-typed-js :strings= this.typeArray :loop="true">
+              <h1 class="mb-0">{{ text.name }}
+                <span class="text-primary">{{ text.surname }}</span>
+                <span class="typing"></span>
+              </h1>
+            </vue-typed-js>
           <div class="subheading mb-5">{{ text.address }}
             <a href="mailto:name@email.com">{{ text.email }}</a>
           </div>
@@ -119,13 +117,13 @@
         <div class="my-auto">
           <h2 class="mb-5">Skills</h2>
 
-          <div class="subheading mb-3"> As a Developer</div>
+          <div class="subheading mb-3">As a Developer</div>
           <ul class="fa-ul mb-3" v-for="skill in text.skills" :key="skill.sk">
             <li>
               <i class="fa-li fa fa-terminal"></i>
               {{skill.sk}}</li>
           </ul>
-          <div class="subheading mb-3"> As a Human</div>
+          <div class="subheading mb-3">As a Human</div>
           <ul class="fa-ul mb-3" v-for="softskill in text.softskills" :key="softskill.ss">
             <li>
               <i class="fa-li fa fa-check"></i>
@@ -202,59 +200,20 @@
 
 <script>
 import dataText from './assets/text.js'
-import { setTimeout } from 'timers'
 
 export default {
   name: 'landing',
   data: function () {
     return {
       text: dataText,
-      typeValue: '',
-      typeStatus: false,
-      typeArray: dataText.isA,
-      typingSpeed: 50,
-      erasingSpeed: 30,
-      newTextDelay: 500,
-      typeArrayIndex: 0,
-      charIndex: 0
+      typeArray: dataText.isA
     }
   },
   methods: {
-    typeText () {
-      if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
-        if (!this.typeStatus) {
-          this.typeStatus = true
-        }
-        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(this.charIndex)
-        this.charIndex += 1
-        setTimeout(this.typeText, this.typingSpeed)
-      } else {
-        this.typeStatus = false
-        setTimeout(this.eraseText, this.newTextDelay)
-      }
-    },
-    eraseText () {
-      if (this.charIndex > 0) {
-        if (!this.typeStatus) {
-          this.typeStatus = true
-        }
-        this.typeValue = this.typeArray[this.typeArrayIndex].substring(0, this.charIndex - 1)
-        this.charIndex -= 1
-        setTimeout(this.eraseText, this.erasingSpeed)
-      } else {
-        this.typeStatus = false
-        this.typeArrayIndex += 1
-        if (this.typeArrayIndex >= this.typeArray.length) {
-          this.typeArrayIndex = 0
-        }
-        setTimeout(this.typeText, this.typingSpeed + 1000)
-      }
-    }
   },
   created: function () {
   },
   mounted: function () {
-    setTimeout(this.typeText, this.newTextDelay + 200)
   }
 }
 </script>
@@ -264,13 +223,6 @@ body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
   color: #868e96;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-    padding-left: 17rem;
-  }
 }
 
 h1,
@@ -301,11 +253,6 @@ typed-text {
   background-color: #BD5D38;
   animation: cursorBlink 1s infinite;
 }
-
-/* .typing {
-  animation: none;
-}
- */
 
 h2 {
   font-size: 3.5rem;
@@ -348,10 +295,27 @@ h2 {
   text-transform: uppercase;
 }
 
-@keyframes cursorBlink {
-  49% { background-color: #ffffff; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh;
+  }
+  section.resume-section .resume-item .resume-date {
+    min-width: 18rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -402,22 +366,6 @@ section.resume-section {
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
-}
-
-@media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
-  }
-  section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
-  }
-}
-
-@media (min-width: 992px) {
-  section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
 }
 
 .bg-primary {

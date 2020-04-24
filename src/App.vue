@@ -183,7 +183,7 @@
           <p>{{text.interests}}</p>
         </div>
       </section>
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" v-on:click="typer()" id="awards">
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
         <div class="my-auto">
           <h2 class="mb-5" id="certi">Certifications</h2>
           <ul class="fa-ul mb-0">
@@ -208,7 +208,8 @@ export default {
       text: dataText,
       typeValue: '',
       typeStatus: false,
-      typeArray: dataText.isA,
+      // typeArray: dataText.isA,
+      typeArray: ['is a Master Student', 'is a problem solver', 'is a software developer', 'is a mountain-biker', 'is a tech enthusiast', 'is the one you are looking for'],
       typingSpeed: 50,
       erasingSpeed: 30,
       newTextDelay: 500,
@@ -249,11 +250,8 @@ export default {
     }
   },
   created: function () {
-    console.log('Created')
   },
   mounted: function () {
-    console.log('Mounted')
-    console.log('Come sei arrivato fino a qui?')
     setTimeout(this.typeText, this.newTextDelay + 200)
   }
 }
@@ -293,6 +291,7 @@ h1 {
 typed-text {
   color: #D2B94B;
 }
+
 .cursor {
   display: inline-block;
   margin-left: 3px;
@@ -300,6 +299,7 @@ typed-text {
   background-color: #BD5D38;
   animation: cursorBlink 1s infinite;
 }
+
 .typing {
   animation: none;
 }

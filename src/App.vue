@@ -249,11 +249,12 @@ export default {
     }
   },
   created: function () {
-    setTimeout(this.typeText, this.newTextDelay + 200)
+    console.log('Created')
   },
   mounted: function () {
+    console.log('Mounted')
     console.log('Come sei arrivato fino a qui?')
-    console.log(document.getElementById('certi').innerHTML)
+    setTimeout(this.typeText, this.newTextDelay + 200)
   }
 }
 </script>

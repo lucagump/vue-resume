@@ -36,8 +36,11 @@
           <h1 class="mb-0">{{ text.name }}
             <span class="text-primary">{{ text.surname }}</span>
             <span class="typed-text">{{ typeValue }}</span>
-            <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
+            <!--  <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>-->
           </h1>
+          <vue-typed-js :strings="['First text', 'Second Text']">
+            <h1 class="typing"></h1>
+          </vue-typed-js>
           <div class="subheading mb-5">{{ text.address }}
             <a href="mailto:name@email.com">{{ text.email }}</a>
           </div>
@@ -208,8 +211,7 @@ export default {
       text: dataText,
       typeValue: '',
       typeStatus: false,
-      // typeArray: dataText.isA,
-      typeArray: ['is a Master Student', 'is a problem solver', 'is a software developer', 'is a mountain-biker', 'is a tech enthusiast', 'is the one you are looking for'],
+      typeArray: dataText.isA,
       typingSpeed: 50,
       erasingSpeed: 30,
       newTextDelay: 500,

@@ -7,7 +7,7 @@ const text = {
     address: 'Strada Boiane 3 · Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
     email: 'l.martinelli@hotmail.com',
     aboutMe1: 'ICT Innovation Student @UNITN and Software Engineer @Zucchetti',
-    aboutMe2: 'I\'m an ICT Innovation Student interested in Automotive HMI and problem solving.',
+    aboutMe2: 'I\'m a student interested in Automotive HMI and problem solving.',
     experience: [
         {
             position: 'Software Engineer',

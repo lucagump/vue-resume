@@ -38,6 +38,7 @@
           <h1 class="mb-0">{{ text.name }}
             <span class="text-primary">{{ text.surname }} </span>
           </h1>
+          <router-link to="/about">push</router-link>
           <div class="subheading mb-5">{{ text.address }}
             <a href="mailto:name@email.com">{{ text.email }}</a>
           </div>

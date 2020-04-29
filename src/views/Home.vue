@@ -249,6 +249,17 @@ export default {
       }
     }
   },
+  metaInfo() {
+    return {
+      title: '${this.text.title} - Homepage',
+      meta: [
+        {
+          name: 'description',
+          content: this.text.aboutMe2
+        }
+      ]
+    }
+  }
   created: function () {
   },
   mounted: function () {

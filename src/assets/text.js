@@ -7,9 +7,8 @@ const text = {
     address: 'Strada Boiane 3 · Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
     email: 'l.martinelli@hotmail.com',
     aboutMe1: 'ICT Innovation Student @UNITN and Software Engineer @Zucchetti',
-    aboutMe2: 'I\'m a student interested in Automotive HMI and problem solving.',
-    experience: [
-        {
+    aboutMe2: 'I\'m a student interested in Automotive HMI and Problem Solving.',
+    experience: [{
             position: 'Software Engineer',
             company: 'Zucchetti',
             description: 'I\'m working in Horeca group, TCPOS is Zucchetti’s omni-functional hub for seamless guest service in restaurants, canteens, quick-service and hotels.',
@@ -19,7 +18,7 @@ const text = {
         {
             position: 'Project Manager and Software Developer',
             company: 'E-Agle Trento Racing Team',
-            description: 'Design and development of the user-interface for Chimera Evoluzione\'s Steering Wheel (Qt). During one of the competition in Varano (PR) 2018 - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of the Telemetry Solution using MQTT protocol for a Cloud Based Web Application using Raspberry PI, MongoDB and Vue. Project-Management related to the development of HW and SW solution for "Telemetria" and"Fenice Steering Wheel"',
+            description: 'Design and development of the user-interface for Chimera Evoluzione\'s Steering Wheel (Qt). During one of the competition in Varano (PR) 2018 - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of the Telemetry Solution using MQTT protocol for a Cloud Based Web Application using Raspberry PI, MongoDB and Vue. Project-Management is considered regarding the development of HW and SW solution for "Telemetria" and "Fenice Steering Wheel"',
             startDate: 'September 2017',
             endDate: 'Present'
         },
@@ -31,8 +30,7 @@ const text = {
             endDate: 'April 2019'
         }
     ],
-    education: [
-        {
+    education: [{
             course: 'Master Degree in ICT Innovation Software and Service Architectures',
             university: 'Università degli Studi di Trento',
             description: '',
@@ -47,7 +45,7 @@ const text = {
             endDate: 'July 2019'
         }
     ],
-    interests: 'Apart from being a student and a developer, I spend my free time being a strict contact with nature. In winter, I am an Snowboarder and in summer I enjoy mountain biking. When I\'m forced indoors, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technolgy in the software development and design interaction.',
+    interests: 'To be honest I \'m interested in how nature and the environment affect our choices and thoughts. This could be a little bit abstract but I spend my free time being a strict contact with nature. I like to take small breaks from my activities in my garden and when it \'s not possible just watching the buildings, people movements and other things that could inspire me. I do not consider my self as a \'sporty\' boy but in winter I love Snowboarding and in summer mountain biking. When I\'m forced indoors, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technolgy in the software development and design interaction.',
     awards: {
         description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
         certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'

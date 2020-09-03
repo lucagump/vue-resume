@@ -6,7 +6,8 @@
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/profile.jpg">
         </span>
       </a>
-      <button class="navbar-toggler" type="button" style="background-color: #FFFF;"  v-on:click="changeText()">
+      <button class="navbar-toggler" type="button" style="border: 0" v-on:click="changeText()">
+          <i class="fa fa-hashtag"  style="color: white;"></i>
       </button>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
@@ -28,6 +29,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#awards">Certification</a>
           </li>
+          <li class="nav-item">
+              <router-link class="nav-link" to="/about" style="color: #BD5D38;">bismark</router-link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -38,7 +42,6 @@
           <h1 class="mb-0">{{ text.name }}
             <span class="text-primary">{{ text.surname }} </span>
           </h1>
-          <router-link to="/about">push</router-link>
           <div class="subheading mb-5">{{ text.address }}
             <a href="mailto:name@email.com">{{ text.email }}</a>
           </div>
@@ -83,7 +86,7 @@
               </li>
             </ul>
           </div>
-          <div v-else><br><br><br><br><br><br><br><br>
+          <div v-else><br><br><br><br><br><br>
             <vue-typed-js :strings= this.typeArray :fadeOut="true" :startDelay="2000" :fadeOutDelay="true">
               <h3><span class="typing mb-5"></span></h3>
             </vue-typed-js>
@@ -246,6 +249,17 @@ export default {
       }
     }
   },
+  metaInfo() {
+    return {
+      title: '${this.text.title} - Homepage',
+      meta: [
+        {
+          name: 'description',
+          content: this.text.aboutMe2
+        }
+      ]
+    }
+  }
   created: function () {
   },
   mounted: function () {

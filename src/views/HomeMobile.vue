@@ -1,127 +1,160 @@
 <template>
   <div class="main-wrapper">
     <div class="container-fluid p-0">
-      <section class="resume-section p-5" id="about">
-        <div class="my-auto">
-          <h2 class="mb-3">{{ text.name }}
-            <span class="text-primary">{{ text.surname }} </span>
-          </h2>
-          <div class="subheading mb-5">{{ text.address }}
-            <a href="mailto:name@email.com">{{ text.email }}</a>
-          </div>
-        </div>
-      </section>
-      <div v-if="changed == 0">
+        <section class="resume-section p-5" id="about">
+            <div class="my-auto">
+                <h2 class="mb-3">{{ text.name }}
+                    <span class="text-primary">{{ text.surname }} </span>
+                </h2>
+                <ul class="list-inline list-social-icons">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/luca.martinelli.12139">
+                    <span class="fa-stack fa-lg">
+                    <i class="devicon-facebook-plain"></i>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/lucagump">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-instagram"></i>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://open.spotify.com/user/lucagump?si=nX0vPKcKRTm0I7YKpfxOMw">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-spotify"></i>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/luca-martinelli-7ab713168">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-linkedin"></i>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https:\\www.github.com/lucagump">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-github-square"></i>
+                    </span>
+                    </a>
+                </li>
+                </ul>
+                <br><br>
+            </div>
+        </section>
         <section class="resume-section p-5" id="experience">
-          <div class="my-auto">
+            <div class="my-auto">
             <h3 class="mb-5">Experience</h3>
             <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in text.experience" :key="job.description">
-              <div class="resume-content mr-auto">
+                <div class="resume-content mr-auto">
                 <h4 class="mb-0">{{ job.position }}</h4>
                 <div class="subheading mb-3">{{ job.company }}</div>
                 <p>{{ job.description }}</p>
-              </div>
-              <div class="resume-date text-md-right">
+                </div>
+                <div class="resume-date text-md-right">
                 <span class="text-primary">{{ job.startDate }} - {{ job.endDate }}</span>
-              </div>
+                </div>
             </div>
-          </div>
+            </div>
         </section>
         <section class="resume-section p-5" id="education">
-          <div class="my-auto">
+            <div class="my-auto">
             <h3 class="mb-5">Education</h3>
             <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="study in text.education" :key="study.description">
-              <div class="resume-content mr-auto">
+                <div class="resume-content mr-auto">
                 <h4 class="mb-0">{{ study.course }}</h4>
                 <div class="subheading mb-3">{{ study.university }}</div>
                 <div>{{ study.description }}</div>
-              </div>
-              <div class="resume-date text-md-right">
+                </div>
+                <div class="resume-date text-md-right">
                 <span class="text-primary">{{ study.startDate }} - {{ study.endDate }}</span>
-              </div>
+                </div>
             </div>
-          </div>
+            </div>
         </section>
         <section class="resume-section p-5" id="skills">
-          <div class="my-auto">
+            <div class="my-auto">
             <h3 class="mb-5">Skills</h3>
 
             <div class="subheading mb-3">As a Developer</div>
             <ul class="fa-ul mb-3" v-for="skill in text.skills" :key="skill.sk">
-              <li>
+                <li>
                 <i class="fa-li fa fa-terminal"></i>
                 {{skill.sk}}</li>
             </ul>
             <div class="subheading mb-3">As a Human</div>
             <ul class="fa-ul mb-3" v-for="softskill in text.softskills" :key="softskill.ss">
-              <li>
+                <li>
                 <i class="fa-li fa fa-check"></i>
                 {{softskill.ss}}</li>
             </ul>
             <div class="subheading mb-4">Programming Languages &amp; Tools</div>
             <ul class="list-inline list-icons">
-              <li class="list-inline-item">
+                <li class="list-inline-item">
                 <i class="devicon-html5-plain"></i>
-              </li>
-              <li class="list-inline-item">
+                </li>
+                <li class="list-inline-item">
                 <i class="devicon-mongodb-plain"></i>
-              </li>
-              <li class="list-inline-item">
+                </li>
+                <li class="list-inline-item">
                 <i class="devicon-linux-plain"></i>
-              </li>
-              <li class="list-inline-item">
+                </li>
+                <li class="list-inline-item">
                 <i class="devicon-nodejs-plain"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-visualstudio-plain"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-csharp-plain"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-vim-plain"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-ubuntu-plain"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-windows8-original"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-vuejs-plain"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-photoshop-line"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-express-original"></i>
-              </li>
-              <li class="list-inline-item">
-              <i class="devicon-github-plain-wordmark"></i>
-              </li>
-              <li class="list-inline-item">
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-visualstudio-plain"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-csharp-plain"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-vim-plain"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-ubuntu-plain"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-windows8-original"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-vuejs-plain"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-photoshop-line"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-express-original"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-github-plain-wordmark"></i>
+                </li>
+                <li class="list-inline-item">
                 <i class="devicon-heroku-line-wordmark"></i>
-              </li>
+                </li>
             </ul>
-          </div>
+            </div>
         </section>
         <section class="resume-section p-5" id="interests">
-          <div class="my-auto">
+            <div class="my-auto">
             <h3 class="mb-3">Interests</h3>          
             <p>{{text.interests}}</p>
-          </div>
+            </div>
         </section>
         <section class="resume-section p-5" id="awards">
-          <div class="my-auto">
-            <h3 clachangedss="mb-5" id="certi">Certifications</h3>
+            <div class="my-auto">
+            <h3 class="mb-5" id="certi">Certifications</h3>
             <ul class="fa-ul mb-0">
-              <li>
-              <i class="fa-li fa fa-check"></i>
+                <li>
+                <i class="fa-li fa fa-check"></i>
                 {{text.awards.certificate}}</li>
             </ul>
-          </div>
+            </div>
         </section>
-      </div>
     </div>
   </div>
 </template>
@@ -129,16 +162,13 @@
 <script>
 // @ is an alias to /src
 import dataText from '@/assets/text.js'
-import prankText from '@/assets/pranktext.js'
 
 export default {
   name: 'landing',
   data: function () {
     return {
       text: dataText,
-      textPrank: prankText,
       textCopy: dataText,
-      typeArray: prankText.isA,
       changed: 0,
       counter: 0
     }
@@ -151,20 +181,6 @@ export default {
         else {
             return false;
         }
-    },
-    changeText() {
-      this.changed = (this.changed == 0)? 1 : 0
-      this.counter++
-      if(this.changed == 1) {
-        this.text = this.textPrank
-      }
-      if(this.changed == 0) {
-        this.text = this.textCopy
-      }
-      if(this.counter > 5){
-        alert('Ook hai visto che funziona? Bene! A quanto pare non hai di meglio da fare? Ho un video per te https://www.youtube.com/watch?v=Z0RnMMk4mL8')
-        this.counter = 0
-      }
     }
   },
   metaInfo() {
@@ -179,9 +195,6 @@ export default {
     }
   },
   created: function () {
-    if (!this.isMobile()) {
-        this.$router.push('/Home');
-    }
   },
   mounted: function () {
   }
@@ -238,7 +251,7 @@ h2 {
 }
 
 .list-social-icons a .fa-lg {
-  font-size: 1.75rem;
+  font-size: 1.55rem;
 }
 
 .list-icons {

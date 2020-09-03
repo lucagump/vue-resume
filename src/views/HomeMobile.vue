@@ -1,52 +1,53 @@
 <template>
   <div class="main-wrapper">
     <div class="container-fluid p-0">
-        <section class="resume-section p-5" id="about">
+        <section class="resume-section p-4" id="about">
             <div class="my-auto">
                 <h2 class="mb-3">{{ text.name }}
                     <span class="text-primary">{{ text.surname }} </span>
+                    <ul class="list-inline list-social-icons">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/luca.martinelli.12139">
+                        <span class="fa-stack fa-lg">
+                        <i class="devicon-facebook-plain"></i>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/lucagump">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-instagram"></i>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://open.spotify.com/user/lucagump?si=nX0vPKcKRTm0I7YKpfxOMw">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-spotify"></i>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/luca-martinelli-7ab713168">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-linkedin"></i>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https:\\www.github.com/lucagump">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-github-square"></i>
+                        </span>
+                        </a>
+                    </li>
+                    </ul>
                 </h2>
-                <ul class="list-inline list-social-icons">
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/luca.martinelli.12139">
-                    <span class="fa-stack fa-lg">
-                    <i class="devicon-facebook-plain"></i>
-                    </span>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/lucagump">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-instagram"></i>
-                    </span>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://open.spotify.com/user/lucagump?si=nX0vPKcKRTm0I7YKpfxOMw">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-spotify"></i>
-                    </span>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/luca-martinelli-7ab713168">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-linkedin"></i>
-                    </span>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https:\\www.github.com/lucagump">
-                    <span class="fa-stack fa-lg">
-                        <i class="fa fa-github-square"></i>
-                    </span>
-                    </a>
-                </li>
-                </ul>
-                <br><br>
+                <br><br><br><br>
+                <br><br><br><br>
             </div>
         </section>
-        <section class="resume-section p-5" id="experience">
+        <section class="resume-section p-4" id="experience">
             <div class="my-auto">
             <h3 class="mb-5">Experience</h3>
             <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in text.experience" :key="job.description">
@@ -61,7 +62,7 @@
             </div>
             </div>
         </section>
-        <section class="resume-section p-5" id="education">
+        <section class="resume-section p-4" id="education">
             <div class="my-auto">
             <h3 class="mb-5">Education</h3>
             <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="study in text.education" :key="study.description">
@@ -76,7 +77,7 @@
             </div>
             </div>
         </section>
-        <section class="resume-section p-5" id="skills">
+        <section class="resume-section p-4" id="skills">
             <div class="my-auto">
             <h3 class="mb-5">Skills</h3>
 
@@ -139,13 +140,13 @@
             </ul>
             </div>
         </section>
-        <section class="resume-section p-5" id="interests">
+        <section class="resume-section p-4" id="interests">
             <div class="my-auto">
             <h3 class="mb-3">Interests</h3>          
             <p>{{text.interests}}</p>
             </div>
         </section>
-        <section class="resume-section p-5" id="awards">
+        <section class="resume-section p-4" id="awards">
             <div class="my-auto">
             <h3 class="mb-5" id="certi">Certifications</h3>
             <ul class="fa-ul mb-0">
@@ -248,14 +249,6 @@ h2 {
 
 .list-social-icons a:hover {
   color: #BD5D38;
-}
-
-.list-social-icons a .fa-lg {
-  font-size: 1.55rem;
-}
-
-.list-icons {
-  font-size: 3rem;
 }
 
 .list-icons .list-inline-item i:hover {

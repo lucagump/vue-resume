@@ -20,6 +20,14 @@
             else {
                 this.$router.push('/Home');
             }
+        },
+        mounted() {
+            if (this.isMobile()) {
+                this.$router.push('/HomeMobile');
+            }
+            else {
+                this.$router.push('/Home');
+            }
         }
     }
 </script>

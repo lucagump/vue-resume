@@ -15,10 +15,9 @@
                         <a href="http://www.lucamartinelli.dev">Click Here</a>
                     </div>
                 </div>
-                </section>
-            </div>
-        </div>
-    </div>
+              </section>
+          </div>
+      </div>
 </template>
 
 <script>

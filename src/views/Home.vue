@@ -181,6 +181,9 @@
               <li class="list-inline-item">
               <i class="devicon-github-plain-wordmark"></i>
               </li>
+              <li class="list-inline-item">
+                <i class="devicon-heroku-line-wordmark"></i>
+              </li>
             </ul>
           </div>
         </section>
@@ -251,7 +254,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: '${this.text.title} - Homepage',
+      title: 'Homepage',
       meta: [
         {
           name: 'description',

@@ -45,7 +45,7 @@ const text = {
             endDate: 'July 2019'
         }
     ],
-    interests: 'To be honest I \'m interested in how nature and the environment affect our choices and thoughts. This could be a little bit abstract but I spend my free time being a strict contact with nature. I like to take small breaks from my activities in my garden and when it \'s not possible just watching the buildings, people movements and other things that could inspire me. I do not consider my self as a \'sporty\' boy but in winter I love Snowboarding and in summer mountain biking. When I\'m forced indoors, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technolgy in the software development and design interaction.',
+    interests: 'To be honest I \'m interested in how nature and the environment affect our choices and thoughts. This could be a little bit abstract but I spend my free time being a strict contact with nature. I like to take small breaks from my activities in my garden and when it \'s not possible just watching the buildings, people movements and other things that could inspire me. I do not consider my self as a \'sporty\' boy but in winter I love snowboarding and in summer mountain biking. When I\'m forced indoors, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technolgy in the software development and design interaction.',
     awards: {
         description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
         certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'

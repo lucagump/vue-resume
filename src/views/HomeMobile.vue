@@ -45,6 +45,7 @@
                 </h2>
                 <br><br><br><br>
                 <br><br><br><br>
+                <br><br><br><br>
             </div>
         </section>
         <section class="resume-section p-4" id="experience">
@@ -54,7 +55,7 @@
                 <div class="resume-content mr-auto">
                 <h4 class="mb-0">{{ job.position }}</h4>
                 <div class="subheading mb-3">{{ job.company }}</div>
-                <p>{{ job.description }}</p>
+                <p style=" text-align: justify;">{{ job.description }}</p>
                 </div>
                 <div class="resume-date text-md-right">
                 <span class="text-primary">{{ job.startDate }} - {{ job.endDate }}</span>
@@ -143,7 +144,7 @@
         <section class="resume-section p-4" id="interests">
             <div class="my-auto">
             <h3 class="mb-3">Interests</h3>          
-            <p>{{text.interests}}</p>
+            <p style=" text-align: justify;">{{text.interests}}</p>
             </div>
         </section>
         <section class="resume-section p-4" id="awards">

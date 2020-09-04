@@ -11,14 +11,14 @@ const text = {
     experience: [{
             position: 'Software Engineer',
             company: 'Zucchetti',
-            description: 'Working on custom retail solution, TCPOS is Zucchetti’s omni-functional hub for seamless guest service in restaurants, canteens, quick-service and hotels.',
+            description: 'I\'m working on custom retail solutions, TCPOS is Zucchetti’s omni-functional hub for guest services in restaurants, canteens, quick-service and hotels.',
             startDate: 'February 2020',
             endDate: 'Present'
         },
         {
             position: 'Project Manager and Software Developer',
             company: 'E-Agle Trento Racing Team',
-            description: 'Design and development of user-interface such as Steering Wheel UI (Qt) and web services. During one of the competition in Varano (PR) 2018 - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of Telemetry Solutions adopting technology like MQTT for Cloud Based Web Applications using Raspberry PI, MongoDB and Vue. Project Management is about the development of HW and SW solution for "Telemetria" and "Steering Wheel"',
+            description: 'Design and development of user-interface such as the steering wheel and web services. During one of the competitions in Varano (PR) 2018 our solution won the - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of Telemetry Solutions adopting technology like MQTT for Cloud Based Web Applications using Raspberry PI, MongoDB and Vue. Project Management is about the development of HW and SW solution for "Telemetria" and "Steering Wheel"',
             startDate: 'September 2017',
             endDate: 'Present'
         },
@@ -45,7 +45,7 @@ const text = {
             endDate: 'July 2019'
         }
     ],
-    interests: 'I\'m interested in how nature and the environment affect our choices and thoughts. This could be a little bit abstract but I spend my free time being a strict contact with nature. I like to take small breaks from my activities in my garden and when it\'s not possible just watching the buildings, people movements and other things that could inspire me. I do not consider my self \'sportive\' person but in winter I love snowboarding and in summer mountain biking. When I\'m forced indoors, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technolgy in the software development and design interaction.',
+    interests: 'I\'m interested in how nature and the environment affect our choices and thoughts. This could be a little bit abstract but I spend my free time being a strict contact with nature. I like to take small breaks from my activities in my garden and when it\'s not possible just watching buildings, people movements and other things that could inspire me. I do not consider my self as \'sportive\' person but in winter I love snowboarding and in summer mountain biking. When I\'m forced indoor, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technology in the software development and design interaction.',
     awards: {
         description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
         certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'

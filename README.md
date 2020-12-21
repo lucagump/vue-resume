@@ -6,6 +6,12 @@
 
 ![](src/assets/coding.gif)
 
+This is the first version, my long-term goal is to build my own version with an AdobeXD template designed by me. Check it below!
+
+## Homepage
+
+![](src/assets/Desktop.pdf)
+
 ## Project setup
 ```
 npm i

@@ -32,7 +32,7 @@ This is the first version, my long-term goal is to build my own version with an 
 
 ![](src/assets/Mobile-Education.png)
 
-## Skillss
+## Skills
 
 ![](src/assets/Skills.png)
 

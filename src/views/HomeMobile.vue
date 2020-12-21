@@ -48,9 +48,9 @@
                 <br><br><br><br>
             </div>
         </section>
-        <section class="resume-section p-4" id="experience">
+        <section class="resume-section p-4" id="experiences">
             <div class="my-auto">
-            <h3 class="mb-5">Experience</h3>
+            <h3 class="mb-5">Experiences</h3>
             <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in text.experience" :key="job.description">
                 <div class="resume-content mr-auto">
                 <h4 class="mb-0">{{ job.position }}</h4>
@@ -138,6 +138,15 @@
                 <li class="list-inline-item">
                 <i class="devicon-heroku-line-wordmark"></i>
                 </li>
+                <li class="list-inline-item">
+                <i class="devicon-nginx-original"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-docker-plain-wordmark"></i>
+                </li>
+                <li class="list-inline-item">
+                <i class="devicon-mocha-plain"></i>
+                </li>
             </ul>
             </div>
         </section>
@@ -152,8 +161,13 @@
             <h3 class="mb-5" id="certi">Certifications</h3>
             <ul class="fa-ul mb-0">
                 <li>
-                <i class="fa-li fa fa-check"></i>
-                {{text.awards.certificate}}</li>
+                  <i class="fa-li fa fa-check"></i>
+                  {{text.awards.firstcertificate}}
+                </li>
+                <li>
+                  <i class="fa-li fa fa-check"></i>
+                  {{text.awards.secondcertificate}}
+                </li>
             </ul>
             </div>
         </section>

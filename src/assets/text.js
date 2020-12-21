@@ -4,23 +4,23 @@ const text = {
     name: 'Luca',
     surname: 'Martinelli',
     isA: ['is a Master Student', 'is a problem solver', 'is a software developer', 'is a mountain-biker', 'is a tech enthusiast', 'is the one you are looking for'],
-    address: 'Strada Boiane 3 · Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
+    address: 'Suzzara (MN) IT 46029 · (+39) 333-4895818 ·',
     email: 'l.martinelli@hotmail.com',
-    aboutMe1: 'ICT Innovation Student @UNITN and Software Engineer @Zucchetti',
-    aboutMe2: 'I\'m a student interested in Automotive HMI and Problem Solving.',
+    aboutMe1: 'ICT Innovation Student @UNITN',
+    aboutMe2: 'I\'m an ICT Innovation Student interested in Automotive HMI and Problem Solving.',
     experience: [{
-            position: 'Software Engineer',
-            company: 'Zucchetti',
-            description: 'I\'m working on custom retail solutions, TCPOS is Zucchetti’s omni-functional hub for guest services in restaurants, canteens, quick-service and hotels.',
-            startDate: 'February 2020',
-            endDate: 'Present'
-        },
-        {
-            position: 'Project Manager and Software Developer',
-            company: 'E-Agle Trento Racing Team',
-            description: 'Design and development of user-interface such as the steering wheel and web services. During one of the competitions in Varano (PR) 2018 our solution won the - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of Telemetry Solutions adopting technology like MQTT for Cloud Based Web Applications using Raspberry PI, MongoDB and Vue. Project Management is about the development of HW and SW solution for "Telemetria" and "Steering Wheel"',
-            startDate: 'September 2017',
-            endDate: 'Present'
+        position: 'Project Manager and Software Developer',
+        company: 'E-Agle Trento Racing Team',
+        description: 'Design and development of user-interface. I improved the software management approach of the team and compelted the first version of the steering wheel. The second year I started a new project with the faculty advisorto to design a new telemetry solution. During one of the competitions in Varano (PR) 2018 our solution won the - "Best HMI Solution" Prize from Automobili Lamborghini. Design and Development of Telemetry Solutions adopting technology like MQTT for Cloud Based Web Applications using Raspberry PI, MongoDB and Vue. Project Management is about the choices behind the HW and SW solution for "Telemetria" and "Steering Wheel"',
+        startDate: 'September 2017',
+        endDate: 'February 2021'
+    },
+    {
+        position: 'Software Engineer',
+        company: 'Zucchetti',
+        description: 'I worked on custom retail solutions, TCPOS is Zucchetti’s omni-functional hub for guest services in restaurants, canteens, quick-service and hotels. I developed plugins by reading customers requirements. Leveraged knowledge in fullstack development, .NET and Azure DevOps',
+        startDate: 'February 2020',
+        endDate: 'October 2020'
         },
         {
             position: 'Full Stack Developer',
@@ -48,14 +48,19 @@ const text = {
     interests: 'I\'m interested in how nature and the environment affect our choices and thoughts. This could be a little bit abstract but I spend my free time being a strict contact with nature. I like to take small breaks from my activities in my garden and when it\'s not possible just watching buildings, people movements and other things that could inspire me. I do not consider my self as \'sportive\' person but in winter I love snowboarding and in summer mountain biking. When I\'m forced indoor, I follow sci-fi and fantasy genre movies and television shows. I like to think about me as an aspiring problem-solver, that spend time exploring the latest technology in the software development and design interaction.',
     awards: {
         description: 'Best HMI Solution - Automobili Lamborghini S.p.A.',
-        certificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'
+        firstcertificate: 'English: B2 certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"',
+        secondcertificate: 'English: Technical Writing certified by "Centro Linguistico di Ateneo - Università degli Studi di Trento"'
     },
+    facts: [
+        {fs : 'First fact'}
+    ],
     skills: [
         { sk: 'Qt, C++, QML: Cross-Platform Development' },
         { sk: 'Can-Bus: Linux Embedded Systems' },
         { sk: 'Linux: Embedded Systems and Server' },
         { sk: 'Node.JS & Vue.JS: Services and Web Application' },
-        { sk: 'C# and .NET: First Steps' }
+        { sk: '.NET, C# & Azure DevOps' },
+        { sk: 'Docker & NGNIX: Microservices' }
     ],
     softskills: [
         { ss: 'Design Thinking' },

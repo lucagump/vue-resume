@@ -15,7 +15,7 @@
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#experiences">Experiences</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#education">Education</a>
@@ -45,7 +45,7 @@
           <div class="subheading mb-5">{{ text.address }}
             <a href="mailto:name@email.com">{{ text.email }}</a>
           </div>
-          <p class="mb-2">{{ text.aboutMe1 }}</p>
+          <!-- <p class="mb-2">{{ text.aboutMe1 }}</p> -->
           <p class="mb-5">{{ text.aboutMe2 }}</p>
           <div v-if="changed == 0">
             <ul class="list-inline list-social-icons mb-0">
@@ -94,9 +94,9 @@
         </div>
       </section>
       <div v-if="changed == 0">
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experiences">
           <div class="my-auto">
-            <h2 class="mb-5">Experience</h2>
+            <h2 class="mb-5">Experiences</h2>
             <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in text.experience" :key="job.description">
               <div class="resume-content mr-auto">
                 <h3 class="mb-0">{{ job.position }}</h3>
@@ -184,6 +184,15 @@
               <li class="list-inline-item">
                 <i class="devicon-heroku-line-wordmark"></i>
               </li>
+              <li class="list-inline-item">
+                <i class="devicon-nginx-original"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="devicon-docker-plain-wordmark"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="devicon-mocha-plain"></i>
+              </li>
             </ul>
           </div>
         </section>
@@ -205,7 +214,10 @@
             <ul class="fa-ul mb-0">
               <li>
               <i class="fa-li fa fa-check"></i>
-                {{text.awards.certificate}}</li>
+                {{text.awards.firstcertificate}}</li>
+              <li>
+              <i class="fa-li fa fa-check"></i>
+                {{text.awards.secondcertificate}}</li>
             </ul>
           </div>
         </section>

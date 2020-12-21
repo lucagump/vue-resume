@@ -10,7 +10,35 @@ This is the first version, my long-term goal is to build my own version with an 
 
 ## Homepage
 
-![](src/assets/Desktop.pdf)
+![](src/assets/Desktop.png)
+
+## Homepage - Mobile
+
+![](src/assets/Mobile.png)
+
+## Experiences
+
+![](src/assets/Experiences.png)
+
+## Experiences - Mobile
+
+![](src/assets/Mobile - Experiences.png)
+
+## Education
+
+![](src/assets/Education.png)
+
+## Education - Mobile
+
+![](src/assets/Mobile - Education.png)
+
+## Skillss
+
+![](src/assets/Skills.png)
+
+## Skills - Mobile
+
+![](src/assets/Mobile - Skills.png)
 
 ## Project setup
 ```
